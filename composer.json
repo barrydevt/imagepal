@@ -1,0 +1,27 @@
+{
+    "name": "barrydevt/imagepal",
+    "description": "Image helper to save images against models and manipulate them",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Barrydevt\\Imagepal\\Tests\\": "tests/",
+            "Barrydevt\\Imagepal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Barry Mason",
+            "email": "barrywebla@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Barrydevt\\Imagepal\\ImagepalServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=8.2"
+    }
+}

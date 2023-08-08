@@ -23,7 +23,8 @@ trait HasModelImages
             'filename' => $localFilename,
             'filetype' => 'image',
             'description' => 'image',
-            'enabled' => true
+            'enabled' => true,
+            'group' => 'MAIN'
         ]);
 
         $this->images()->save($model);
@@ -32,8 +33,8 @@ trait HasModelImages
     /**
      * @return MorphMany
      */
-    public function images() : MorphMany
+    public function image(string $id)
     {
-        return $this->morphMany(ModelImage::class, 'model');
+        return $this->morphMany(ModelImage::class, 'model')->where('group', $id)->first();
     }
 }

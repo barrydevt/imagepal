@@ -10,7 +10,14 @@ class ModelImage extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'filename',
+        'filetype',
+        'description',
+        'enabled',
+        'group',
+        'position'
+    ];
 
     /**
      * @return MorphTo
